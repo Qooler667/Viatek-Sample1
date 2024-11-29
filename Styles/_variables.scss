@@ -1,0 +1,43 @@
+:root {
+    --color-dark: #262d2a;
+    --dark-gray: #37403D;
+    --light-gray: #858585;
+    --color-green: #26b447;
+    --color-white: #ffffff;
+    // gradient background
+    --background-green: linear-gradient(90deg, #006943 30%, #26b447 100%);
+    // buttons
+    --bg-g-button1: linear-gradient(90deg, #26b447 0%, #006943 100%);
+    --bg-g-button2: linear-gradient(90deg, #3adc49 0%, #26b447 45.82%, #006943 100%);
+    --bg-g-button3: linear-gradient(178deg, #26b447 0%, #229b32 50.39%, #3adc49 100%);
+    --bg-g-button-gray: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(243, 255, 172, 0.41) 100%);
+    --bg-button-gray: #9b9b9b;
+    --bg-button-img: rgba(255, 255, 255, 0.18);
+    // shadow
+    --shadow-bg-img: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    // text colors
+    --text-field: #cdcdcd;
+    --alt-text: #a9aeb9;
+    // borders
+    --bord-field-lt: 1px solid #cdcdcd;
+    --bord-field-dk: 1px solid #565656;
+    --border-10: 10px;
+    --border-15: 15px;
+    --border-20: 20px;
+    // fonts
+    --base-font: "noto-sans-regular";
+    --base-light: "noto-sans-light";
+    --base-semi-bold: "noto-sans-semi-bold";
+    --base-bold: "noto-sans-bold";
+    --base-medium: "noto-sans-medium";
+    --base-italic: "noto-sans-italic";
+    --secondary-font: "myriad-pro-regular";
+    --secondary-semibold: "myriad-pro-semibold";
+    --rare-font: "futuris-regular";
+    // 
+    --container-width: 1520px;
+    --container-paddingX: 20px;
+    --section-paddingY: 50px;
+    // 
+    --transition-duration: .2s;
+}

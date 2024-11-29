@@ -1,0 +1,18 @@
+ body {
+     font-family: "noto-sans-regular";
+     font-weight: 300;
+     font-size: 20px;
+     line-height: auto;
+     color: var(--color-dark);
+     background-color: var(--color-white);
+ }
+
+ a,
+ button,
+ input {
+     transition-duration: var(--transition-duration);
+ }
+
+ h1 {
+     @include fluid-text(35, 25);
+ }
