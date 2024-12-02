@@ -1,4 +1,20 @@
-@import 'global';
-@import'mixins';
-@import'variables';
-@import'fonts';
+@import'normalize.scss';
+@import 'fonts.scss';
+@import 'mixins.scss';
+@import 'variables';
+@import 'globals';
+@import 'blocks/header';
+
+// дла кнопок на мобилках
+button {
+    background-color: blue;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: aliceblue;
+
+    @include hover {
+        background-color: green;
+    }
+}
+
+// 

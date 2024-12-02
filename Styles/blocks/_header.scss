@@ -1,0 +1,205 @@
+.header-top {
+    background: var(--bg-header-gradient);
+    width: 100%;
+    font-size: 15px;
+    color: var(--color-white);
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        &_location {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        &_menu {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            .menu__list {
+                display: flex;
+
+
+                &_item {
+                    padding: 20px 30px;
+                }
+            }
+        }
+    }
+
+    // КНОПКА БУРГЕР
+    .button-burger {
+        display: flex;
+        position: relative;
+        padding: 20px 30px;
+        background: inherit;
+
+        &__span {
+            position: absolute;
+            top: 50%;
+            bottom: 50%;
+            transform: translate(-50%, -50%);
+            right: 10px;
+            width: 18px;
+            height: 2.5px;
+            background-color: aliceblue;
+
+        }
+
+        &__span::after {
+            content: '';
+            position: absolute;
+            top: 7.5px;
+            right: 0;
+            width: 24px;
+            height: 2px;
+            background-color: rgb(250, 248, 248);
+        }
+
+        &__span::before {
+            content: '';
+            position: absolute;
+            top: -7.5px;
+            right: 0;
+            width: 24px;
+            height: 2px;
+            background-color: rgb(250, 248, 248);
+        }
+
+        .burger-menu-wrapper {
+            position: absolute;
+            width: 350px;
+            top: 30px;
+            right: 30px;
+            cursor: default;
+            padding: 50px 50px;
+            border-radius: var(--border-20);
+            background-color: var(--color-dark);
+
+            .burger-menu-close {
+                position: absolute;
+                top: 15px;
+                right: 20px;
+            }
+
+            .burger-menu__list {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                &_item {
+                    display: flex;
+                    gap: 10px;
+                    white-space: nowrap;
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .burger-menu-wrapper {
+            display: none;
+        }
+
+        // ^ КНОПКА БУРГЕР
+    }
+
+    .button-burger:hover .burger-menu-wrapper {
+        display: block;
+    }
+}
+
+
+
+
+
+.header-bottom {
+    background-color: #fafafa;
+    width: 100%;
+    padding: 50px 0;
+
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_logo {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+
+        .input-wrapper {
+            position: relative;
+
+        }
+
+        &_field {
+            width: 321px;
+            height: 44px;
+            padding: 10px 20px;
+            border-radius: var(--border-10);
+            border: var(--bord-field-lt);
+        }
+
+        .field-button-search {
+            position: absolute;
+            top: 1.5px;
+            right: 0;
+            background-color: inherit;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 50px;
+        }
+
+        .header-bottom__phone-menu {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .phone__menu_link-wrapper {
+            position: relative;
+
+            .phone__list-wrapper {
+                position: absolute;
+                top: 0px;
+                right: -25px;
+                display: flex;
+                width: 300px;
+                padding: 30px 30px;
+                color: var(--color-dark);
+                border-radius: var(--border-20);
+                background-color: inherit;
+
+                .phone__list {
+                    display: flex;
+                    padding: 20px 20px;
+                    flex-direction: column;
+                    gap: 20px;
+                    border: .5px solid #b9b9b9;
+                    background-color: #fafafa;
+                    border-radius: var(--border-10);
+                }
+            }
+
+            .phone__list-wrapper {
+                display: none;
+            }
+        }
+
+        .phone__menu_link {
+            display: flex;
+            padding: 5px;
+        }
+
+        .phone__menu_link-wrapper:hover .phone__list-wrapper {
+            display: block;
+        }
+    }
+}

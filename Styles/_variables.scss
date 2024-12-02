@@ -5,7 +5,8 @@
     --color-green: #26b447;
     --color-white: #ffffff;
     // gradient background
-    --background-green: linear-gradient(90deg, #006943 30%, #26b447 100%);
+    --bg-header-gradient: linear-gradient(90deg, #3adc49 0%, #006943 100%);
+    --bg-footer-gradient: linear-gradient(90deg, #006943 30%, #26b447 100%);
     // buttons
     --bg-g-button1: linear-gradient(90deg, #26b447 0%, #006943 100%);
     --bg-g-button2: linear-gradient(90deg, #3adc49 0%, #26b447 45.82%, #006943 100%);
@@ -34,10 +35,6 @@
     --secondary-font: "myriad-pro-regular";
     --secondary-semibold: "myriad-pro-semibold";
     --rare-font: "futuris-regular";
-    // 
-    --container-width: 1520px;
-    --container-paddingX: 20px;
-    --section-paddingY: 50px;
     // 
     --transition-duration: .2s;
 }

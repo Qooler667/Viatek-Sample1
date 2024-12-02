@@ -5,18 +5,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./Reset-css/reset.css">
     <link rel="stylesheet" href="./Styles/style.css">
-
-
 </head>
 
 <body>
-    <div class="container">
-        <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h1>
-    </div>
+    <header class="header">
+        <div class="header-top">
+            <div class="header-top__container container">
+                <div class="header-top__container_location">
+                    <img src="./icons/location.svg" alt="иконка-локации" class="location">
+                    <a class="header-top__location_link">Москва</a>
+                </div>
+                <nav class="header-top__container_menu">
+                    <ul class="menu__list">
+                        <li class="menu__list_item">
+                            <a href="#" class="list__item_link">Услуги</a>
+                        </li>
+                        <li class="menu__list_item">
+                            <a href="#" class="list__item_link">Новости</a>
+                        </li>
+                        <li class="menu__list_item">
+                            <a href="#" class="list__item_link">Портфолио</a>
+                        </li>
+                    </ul>
+                    <button class="button-burger">
+                        <span class="button-burger__span"></span>
+                        <div class="burger-menu-wrapper">
+                            <a class="burger-menu-close">
+                                <img src="./icons/close.svg" alt="иконка выхода">
+                            </a>
+                            <ul class="burger-menu__list">
+                                <li class="burger-menu__list_item"><img src="./icons/three-dots-white.svg"
+                                        alt="three-dots"><a href="#">О компании</a></li>
+                                <li class="burger-menu__list_item"><img src="./icons/three-dots-white.svg"
+                                        alt="three-dots"><a href="#">Услуги</a></li>
+                                <li class="burger-menu__list_item"><img src="./icons/three-dots-white.svg"
+                                        alt="three-dots"><a href="#">Портфолио</a></li>
+                                <li class="burger-menu__list_item"><img src="./icons/three-dots-white.svg"
+                                        alt="three-dots"><a href="#">Новости</a></li>
+                                <li class="burger-menu__list_item"><img src="./icons/three-dots-white.svg"
+                                        alt="three-dots"><a href="#">Контакты</a></li>
+                                <li class="burger-menu__list_item"><img src="./icons/three-dots-white.svg"
+                                        alt="three-dots"><a href="#">Документы</a></li>
+                                <li class="burger-menu__list_item"><img src="./icons/three-dots-white.svg"
+                                        alt="three-dots"><a href="#">Прайс</a></li>
+                            </ul>
+                        </div>
 
 
+                    </button>
+                </nav>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="header-bottom__container container">
+                <div class="header-bottom__container_logo">
+                    <a href="#">
+                        <img src="./icons/logo-header.svg" alt="Логотип Viatek-Sample">
+                    </a>
+                    <hr>
+                    <p>Мы не допускаем типовых решений,<br>
+                        нам интересно всякий раз создавать новое!</p>
+                </div>
+                <div class="input-wrapper"><input type="search" class="header-bottom__container_field"
+                        placeholder="поиск"><button class="field-button-search"><img src="./icons/search.svg"
+                            alt="иконка поиска"></button></div>
+                <div class="header-bottom__container_timetable">
+                    <p class="small-bold-text">График работы:</br>
+                        <span class="small-thin-text">Пн-Пт, 9:00-18:00</span>
+                    </p>
+                </div>
+                <div class="social-links">
+                    <div class="whatsapp-link-gray "><a class="social-link" href="#"><img src="./icons/vatcap.svg"
+                                alt="иконка ватцап"></a>
+                    </div>
+                    <div class="telegramm-link-gray "><a class="social-link" href="#"><img src="./icons/telegramm.svg"
+                                alt="иконка телеграмм"></a>
+                    </div>
+                </div>
+                <div class="header-bottom__phone-menu">
+                    <div class="phone__menu_img"><img src="./icons/green-phone.svg" alt="иконка телефона"></div>
+                    <div class="phone__menu_number">+79103606392</div>
+                    <div class="phone__menu_link-wrapper">
+                        <a href="#" class="phone__menu_link">
+                            <img src="./icons/chevron-down-green.svg" alt="иконка стрелка в низ">
+                        </a>
+                        <div class="phone__list-wrapper">
+                            <ul class="phone__list">
+                                <li class="phone__list_item">+ 7 9 1 0 3 6 0 6 3 9 2</li>
+                                <li class="phone__list_item">+ ....</li>
+                                <li class="phone__list_item">+ ....</li>
+                                <li class="phone__list_item">+ ....</li>
+                                <li class="phone__list_item">+ ....</li>
+                                <li class="phone__list_item">+ ....</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
 
 </body>
 
