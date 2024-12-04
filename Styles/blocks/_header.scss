@@ -22,7 +22,6 @@
             .menu__list {
                 display: flex;
 
-
                 &_item {
                     padding: 20px 30px;
                 }
@@ -34,6 +33,7 @@
     .button-burger {
         display: flex;
         position: relative;
+        height: 40px;
         padding: 20px 30px;
         background: inherit;
 
@@ -46,7 +46,6 @@
             width: 18px;
             height: 2.5px;
             background-color: aliceblue;
-
         }
 
         &__span::after {
@@ -111,15 +110,10 @@
     }
 }
 
-
-
-
-
 .header-bottom {
     background-color: #fafafa;
     width: 100%;
     padding: 50px 0;
-
 
     &__container {
         display: flex;
@@ -130,6 +124,13 @@
             display: flex;
             align-items: center;
             font-size: 15px;
+
+            .container__logo_line {
+                width: 71px;
+                height: 0;
+                border: 1px solid #d9e7da;
+                transform: rotate(90deg);
+            }
         }
 
         .input-wrapper {
@@ -147,9 +148,15 @@
 
         .field-button-search {
             position: absolute;
-            top: 1.5px;
-            right: 0;
+            top: 2px;
+            right: 0px;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: inherit;
+
         }
 
         .social-links {
@@ -168,11 +175,11 @@
 
             .phone__list-wrapper {
                 position: absolute;
-                top: 0px;
+                top: 15px;
                 right: -25px;
                 display: flex;
                 width: 300px;
-                padding: 30px 30px;
+                padding-top: 25px;
                 color: var(--color-dark);
                 border-radius: var(--border-20);
                 background-color: inherit;

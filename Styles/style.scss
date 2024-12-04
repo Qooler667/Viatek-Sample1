@@ -4,17 +4,5 @@
 @import 'variables';
 @import 'globals';
 @import 'blocks/header';
-
-// дла кнопок на мобилках
-button {
-    background-color: blue;
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: aliceblue;
-
-    @include hover {
-        background-color: green;
-    }
-}
-
-// 
+@import 'blocks/home-page';
+@import 'blocks/footer.scss';
