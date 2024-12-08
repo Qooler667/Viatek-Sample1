@@ -10,106 +10,168 @@
 
 <body>
     <header class="header">
-        <div class="header-top">
-            <div class="header-top__container container">
-                <div class="header-top__container_location">
-                    <img src="./icons/location.svg" alt="иконка-локации" class="location">
-                    <a class="header-top__location_link">Москва</a>
+        <div class="header-top-bg">
+            <div class="header-top container">
+                <div class="header-top__loc">
+                    <div class="location-wrapper">
+                        <div class="header-top__loc_icon"><img src="./icons/location.svg" alt=""></div>
+                        <div class="header-top__loc_link"><a href="#">Москва</a></div>
+                    </div>
+                    <div class="phone-wrapper">
+                        <div class="phone-wrapper__icon-phone">
+                            <button class="phone-button">
+                                <img src="./icons/phone-white.svg" alt="иконка телефона">
+                            </button>
+                        </div>
+                        <div>+7 910 360 63 92</div>
+                        <div class="phone-wrapper__icon-chevron">
+                            <a class="phone-wrapper__link" href="#">
+                                <img src="./icons/chevron-down-white.svg" alt="">
+                            </a>
+                            <div class="phone_list-wrapper">
+                                <div class="enter">
+                                    <a href="#">enter</a>
+                                </div>
+                                <ul class="phone__list">
+                                    <li class="phone__list_item">+.............</li>
+                                    <li class="phone__list_item">+.............</li>
+                                    <li class="phone__list_item">+.............</li>
+                                    <li class="phone__list_item">+.............</li>
+                                    <li class="phone__list_item">+.............</li>
+                                    <li class="phone__list_item">+.............</li>
+                                    <li class="phone__list_item">+.............</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <nav class="header-top__container_menu">
-                    <ul class="menu__list">
-                        <li class="menu__list_item">
-                            <a href="#" class="list__item_link">Услуги</a>
+                <div class="header-top__nav-wrapper">
+                    <ul class="header-top__nav-menu">
+                        <li class="header-top__menu_link">
+                            <a href="./services.html">Услуги</a>
                         </li>
-                        <li class="menu__list_item">
-                            <a href="#" class="list__item_link">Новости</a>
+                        <li class="header-top__menu_link">
+                            <a href="./news.html">Новости</a>
                         </li>
-                        <li class="menu__list_item">
-                            <a href="#" class="list__item_link">Портфолио</a>
+                        <li class="header-top__menu_link">
+                            <a href="./portfolio.html">Портфолио</a>
                         </li>
                     </ul>
-                    <button class="button-burger">
-                        <span class="button-burger__span"></span>
-                        <div class="burger-menu-wrapper">
-                            <a class="burger-menu-close">
-                                <img src="./icons/close.svg" alt="иконка выхода">
-                            </a>
-                            <ul class="burger-menu__list">
-                                <li class="burger-menu__list_item"><img src="./icons/three-dots-white.svg"
-                                        alt="three-dots"><a href="#">О компании</a></li>
-                                <li class="burger-menu__list_item"><img src="./icons/three-dots-white.svg"
-                                        alt="three-dots"><a href="#">Услуги</a></li>
-                                <li class="burger-menu__list_item"><img src="./icons/three-dots-white.svg"
-                                        alt="three-dots"><a href="#">Портфолио</a></li>
-                                <li class="burger-menu__list_item"><img src="./icons/three-dots-white.svg"
-                                        alt="three-dots"><a href="#">Новости</a></li>
-                                <li class="burger-menu__list_item"><img src="./icons/three-dots-white.svg"
-                                        alt="three-dots"><a href="#">Контакты</a></li>
-                                <li class="burger-menu__list_item"><img src="./icons/three-dots-white.svg"
-                                        alt="three-dots"><a href="#">Документы</a></li>
-                                <li class="burger-menu__list_item"><img src="./icons/three-dots-white.svg"
-                                        alt="three-dots"><a href="#">Прайс</a></li>
-                            </ul>
+                    <div class="header-top__menu">
+                        <!-- BURGER -->
+                        <div class="header-top__menu_burger"><span class="span"></span>
+                            <div class="burger__pop-up">
+                                <div class="burger__pop-up_enter"><a href="#">enter</a></div>
+                                <ul class="burger__pop-up_list">
+                                    <li class="pop-up__list_item">
+                                        <div class="pop-up__list_item-dots">
+                                            <img src="./icons/three-dots-white.svg" alt="точки">
+                                        </div>
+                                        <a href="#">О компании</a>
+                                    </li>
+                                    <li class="pop-up__list_item">
+                                        <div class="pop-up__list_item-dots">
+                                            <img src="./icons/three-dots-white.svg" alt="точки">
+                                        </div>
+                                        <a href="#">Услуги</a>
+                                    </li>
+                                    <li class="pop-up__list_item">
+                                        <div class="pop-up__list_item-dots"><img src="./icons/three-dots-white.svg"
+                                                alt="точки"></div><a href="#">Портфолио</a>
+                                    </li>
+                                    <li class="pop-up__list_item">
+                                        <div class="pop-up__list_item-dots"><img src="./icons/three-dots-white.svg"
+                                                alt="точки"></div><a href="#">Новости</a>
+                                    </li>
+                                    <li class="pop-up__list_item">
+                                        <div class="pop-up__list_item-dots"><img src="./icons/three-dots-white.svg"
+                                                alt="точки"></div><a href="#">Контакты</a>
+                                    </li>
+                                    <li class="pop-up__list_item">
+                                        <div class="pop-up__list_item-dots"><img src="./icons/three-dots-white.svg"
+                                                alt="точки"></div><a href="#">Документы</a>
+                                    </li>
+                                    <li class="pop-up__list_item">
+                                        <div class="pop-up__list_item-dots"><img src="./icons/three-dots-white.svg"
+                                                alt="точки"></div><a href="#">Прайс</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </button>
-                </nav>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="header-bottom">
-            <div class="header-bottom__container container">
-                <div class="header-bottom__container_logo">
-                    <a href="#">
-                        <img src="./icons/logo-header.svg" alt="Логотип Viatek-Sample">
-                    </a>
-                    <hr class="container__logo_line">
-                    <p>Мы не допускаем типовых решений,<br>
-                        нам интересно всякий раз создавать новое!</p>
-                </div>
-                <div class="input-wrapper"><input type="search" class="header-bottom__container_field"
-                        placeholder="поиск"><button class="field-button-search"><img src="./icons/search.svg"
-                            alt="иконка поиска"></button></div>
-                <div class="header-bottom__container_timetable">
-                    <p class="small-bold-text">График работы:</br>
-                        <span class="small-thin-text">Пн-Пт, 9:00-18:00</span>
-                    </p>
-                </div>
-                <div class="social-links">
-                    <div class="whatsapp-link-gray "><a class="social-link" href="#"><img src="./icons/vatcap.svg"
-                                alt="иконка ватцап"></a>
+        <!-- HEADER BOTTOM -->
+        <div class="header-bottom-bg">
+            <div class="header-bottom container">
+                <div class="header-bottom__logo-wrapper">
+                    <div class="header-bottom__logo">
+                        <img src="./icons/logo-header.svg" alt="логотип Viatek-Sample">
                     </div>
-                    <div class="telegramm-link-gray "><a class="social-link" href="#"><img src="./icons/telegramm.svg"
-                                alt="иконка телеграмм"></a>
+                    <hr class="header-bottom__line">
+                    <div class="header-bottom__logo_text">
+                        <p>Мы не допускаем типовых решений,<br>нам интересно всякий раз создавать новое!</p>
                     </div>
                 </div>
-                <div class="header-bottom__phone-menu">
-                    <div class="phone__menu_img"><img src="./icons/green-phone.svg" alt="иконка телефона"></div>
-                    <div class="phone__menu_number">+79103606392</div>
-                    <div class="phone__menu_link-wrapper">
-                        <a href="#" class="phone__menu_link">
-                            <img src="./icons/chevron-down-green.svg" alt="иконка стрелка в низ">
+                <div class="header-bottom__field-wrapper">
+                    <input class="header-bottom__field" type="search" placeholder="поиск">
+                    <button class="header-bottom__button"><img src="./icons/search.svg" alt=""></button>
+                </div>
+                <div class="header-bottom__sked-wrapper">
+                    <div class="header-bottom__sked">
+                        <p class="bold-text">График работы:</p>
+                        <p class="thin-text">Пн-Пт, 9:00 - 18:00</p>
+                    </div>
+                </div>
+                <div class="header-bottom__social-wrapper">
+                    <div class="social-wrapper__telegramm">
+                        <div class="telegramm-icon">
+                            <img src="./icons/telegramm.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="social-wrapper__whatsapp">
+                        <div class="whatsapp-icon">
+                            <img src="./icons/vatcap.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom__phone-wrapper">
+                    <div class="phone-wrapper__icon-phone">
+                        <button class="phone-button">
+                            <img src="./icons/green-phone.svg" alt="иконка телефона">
+                        </button>
+                    </div>
+                    <div>+7 910 360 63 92</div>
+                    <div class="phone-wrapper__icon-chevron">
+                        <a class="phone-wrapper__link" href="#">
+                            <img src="./icons/chevron-down-green.svg" alt="">
                         </a>
-                        <div class="phone__list-wrapper">
+                        <div class="phone_list-wrapper">
+                            <div class="enter">
+                                <a href="#">enter</a>
+                            </div>
                             <ul class="phone__list">
-                                <li class="phone__list_item">+ 7 9 1 0 3 6 0 6 3 9 2</li>
-                                <li class="phone__list_item">+ ....</li>
-                                <li class="phone__list_item">+ ....</li>
-                                <li class="phone__list_item">+ ....</li>
-                                <li class="phone__list_item">+ ....</li>
-                                <li class="phone__list_item">+ ....</li>
+                                <li class="phone__list_item">+.............</li>
+                                <li class="phone__list_item">+.............</li>
+                                <li class="phone__list_item">+.............</li>
+                                <li class="phone__list_item">+.............</li>
+                                <li class="phone__list_item">+.............</li>
+                                <li class="phone__list_item">+.............</li>
+                                <li class="phone__list_item">+.............</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
     </header>
     <!-- REVIEW SECTION -->
     <section class="review">
-        <div class="container">
+        <div class="container review-container">
             <div class="review__inform">
                 <div class="review__title">
-                    <h1>Создаем комфортную<br> среду в гармонии с<br> природой!</h1>
+                    <h1>Создаем комфортную<br class="yes"> среду<br class="none"> в гармонии с<br class="yes"> природой!
+                    </h1>
                 </div>
                 <div class="review__text">
                     <p class="
@@ -124,7 +186,11 @@ large-text">Мы любим то, что делаем. В приоритете<b
                     <div class="review__dots_dot"></div>
                 </div>
             </div>
-            <div class="review__images"></div>
+            <div class="review__img-wrapper">
+                <div class="review__img">
+                    <img src="./img/home-page/review-img.png" alt="Фото дворика">
+                </div>
+            </div>
         </div>
     </section>
     <!-- SERVICES SECTION -->
@@ -201,7 +267,8 @@ large-text">Мы любим то, что делаем. В приоритете<b
                     <h2>О нас</h2>
                 </div>
                 <div class="about-wrap__aboutUs_text">
-                    <p>Компания Green History образовалась в 2006 году на полном<br> энтузиазме и огромном увлечении в
+                    <p class="aboutUs_text">Компания Green History образовалась в 2006 году на полном<br> энтузиазме и
+                        огромном увлечении в
                         области ландшафтного
                         дизайна<br> Начало было положено, первыми заказчиками были знакомые и<br> родственники. С каждым
                         шагом,
@@ -279,9 +346,11 @@ large-text">Мы любим то, что делаем. В приоритете<b
                         это
                         доступно и интересно!</p>
                 </div>
-                <div class="about-wrap__aboutUs_button"><button>Подробнее</button></div>
+                <div class="about-wrap__aboutUs_button"><button class="button">Подробнее</button></div>
             </div>
-            <div class="about-wrap__img"></div>
+            <div class="about-wrap__img">
+                <div class="about-img"><img src="" alt=""></div>
+            </div>
         </div>
     </section>
     <!-- NEWS SECTION -->

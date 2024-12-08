@@ -1,8 +1,11 @@
 @import'normalize.scss';
 @import 'fonts.scss';
 @import 'mixins.scss';
-@import 'variables';
-@import 'globals';
-@import 'blocks/header';
-@import 'blocks/home-page';
+@import 'variables.scss';
+@import 'globals.scss';
+@import 'blocks/header.scss';
+@import 'blocks/home-page.scss';
 @import 'blocks/footer.scss';
+@import 'blocks/portfolio-page.scss';
+@import 'blocks/services-page.scss';
+@import 'blocks/news-page.scss';

@@ -1,27 +1,37 @@
 // REVIEW SECTION
-.review__inform {
+.review-container {
     display: flex;
-    flex-direction: column;
-    gap: 50px;
+    justify-content: space-between;
 
-    .review__dots {
+    .review__inform {
+        min-width: 450px;
         display: flex;
-        gap: 24px;
-        padding: 0 12px;
+        flex-direction: column;
+        gap: 50px;
+        padding-right: 30px;
 
-
-        &_dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--text-field);
+        .none {
+            display: none;
         }
 
-        &_dot:first-child {
-            background: #1fa547;
-            ;
+        .review__dots {
+            display: flex;
+            gap: 24px;
+            padding: 0 12px;
+
+            &_dot {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: var(--text-field);
+            }
+
+            &_dot:first-child {
+                background: #1fa547;
+            }
         }
     }
+
 }
 
 // SERVICES SECTION
@@ -84,24 +94,38 @@
 .about {
     background-color: #26B447;
 
+    .about-wrap {
+        display: flex;
+    }
+
     &-wrap__aboutUs {
         display: flex;
         flex-direction: column;
         gap: 50px;
         color: var(--color-white);
-        margin-right: 70px;
+        margin-right: 10px;
 
         h2 {
             color: var(--color-white);
         }
 
         &_text {
-            padding-right: 20px;
+            display: flex;
             height: 542px;
             overflow-y: auto;
             line-height: 150%;
             font-size: 20px;
             font-weight: 400;
+            white-space: nowrap;
+        }
+
+        ::-webkit-scrollbar {
+            width: 3px;
+            background: #00ff4c44;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #62ff0081;
         }
 
         &_button {
@@ -111,6 +135,12 @@
             border: 1px solid var(--color-white);
             border-radius: var(--border-10);
         }
+    }
+
+    &-wrap__img {
+        width: 800px;
+        height: 800px;
+        border: 1px solid black;
     }
 }
 
@@ -214,4 +244,71 @@
         display: block;
     }
 
+}
+
+// @MEDIA-REVIEW-SECTION
+@media(max-width:1443.9px) {
+    .review-container {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+
+        .review__inform {
+            gap: 30px;
+
+            .none {
+                display: block;
+            }
+
+            .yes {
+                display: none;
+            }
+
+            .review__dots {
+                display: flex;
+                justify-content: center;
+                gap: 50px;
+            }
+        }
+
+        .review__img-wrapper {
+            width: 100%;
+            height: 100%;
+
+        }
+    }
+
+    .about {
+        padding: 30px 0;
+    }
+
+    .about-wrap {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+        text-align: center;
+
+        &__aboutUs {
+            gap: 30px;
+
+            .about-wrap__aboutUs_text {
+                display: flex;
+                margin: 0 auto;
+
+                .aboutUs_text {
+                    padding: 0 20px;
+                }
+            }
+
+            &_button {
+                margin: 0 auto;
+            }
+        }
+
+        &__img {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
 }

@@ -1,212 +1,396 @@
-.header-top {
+.header-top-bg {
     background: var(--bg-header-gradient);
-    width: 100%;
-    font-size: 15px;
     color: var(--color-white);
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
 
-    &__container {
-        display: flex;
-        justify-content: space-between;
+.header-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        &_location {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+.location-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
-        &_menu {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-
-            .menu__list {
-                display: flex;
-
-                &_item {
-                    padding: 20px 30px;
-                }
-            }
-        }
+    .header-top__loc_icon {
+        padding-top: 2px;
     }
 
-    // КНОПКА БУРГЕР
-    .button-burger {
+    .header-top__loc_link {
+        padding: 5px 10px;
+    }
+}
+
+.phone-wrapper {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    display: none;
+
+    .phone-button,
+    .phone-wrapper__link {
+        width: 30px;
+        height: 30px;
         display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .phone-button:hover,
+    a:hover {
+        background-color: #00ff0d;
+    }
+
+    .phone-wrapper__icon-chevron {
         position: relative;
-        height: 40px;
-        padding: 20px 30px;
-        background: inherit;
 
-        &__span {
+        .phone_list-wrapper {
             position: absolute;
-            top: 50%;
-            bottom: 50%;
-            transform: translate(-50%, -50%);
-            right: 10px;
-            width: 18px;
-            height: 2.5px;
-            background-color: aliceblue;
-        }
-
-        &__span::after {
-            content: '';
-            position: absolute;
-            top: 7.5px;
-            right: 0;
-            width: 24px;
-            height: 2px;
-            background-color: rgb(250, 248, 248);
-        }
-
-        &__span::before {
-            content: '';
-            position: absolute;
-            top: -7.5px;
-            right: 0;
-            width: 24px;
-            height: 2px;
-            background-color: rgb(250, 248, 248);
-        }
-
-        .burger-menu-wrapper {
-            position: absolute;
-            width: 350px;
-            top: 30px;
-            right: 30px;
-            cursor: default;
-            padding: 50px 50px;
+            width: 300px;
+            height: auto;
+            padding: 50px 30px;
+            background: var(--color-dark);
             border-radius: var(--border-20);
-            background-color: var(--color-dark);
+            display: none;
 
-            .burger-menu-close {
+            .enter {
                 position: absolute;
-                top: 15px;
-                right: 20px;
+                top: 10px;
+                right: 15px;
+                display: flex;
+                padding: 3px;
+                border-radius: 10px;
+                border: 1px solid rgba(192, 192, 192, 0.274);
             }
 
-            .burger-menu__list {
+            .phone__list {
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
-
-                &_item {
-                    display: flex;
-                    gap: 10px;
-                    white-space: nowrap;
-                    font-size: 25px;
-                }
+                padding: 20px;
+                border: 1px solid rgba(192, 192, 192, 0.274);
+                border-radius: var(--border-10);
+                background: var(--color-dark);
             }
         }
-
-        .burger-menu-wrapper {
-            display: none;
-        }
-
-        // ^ КНОПКА БУРГЕР
     }
 
-    .button-burger:hover .burger-menu-wrapper {
+    .phone-wrapper__icon-chevron:hover .phone_list-wrapper {
         display: block;
     }
 }
 
-.header-bottom {
-    background-color: #fafafa;
-    width: 100%;
-    padding: 50px 0;
+.header-top__nav-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
-    &__container {
+.header-top__nav-menu {
+    display: flex;
+
+    .header-top__menu_link {
+        padding: 20px 30px;
+    }
+}
+
+.header-top__menu {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &_burger {
+        width: 30px;
+        height: 30px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        position: relative;
+        cursor: pointer;
 
-        &_logo {
+        .span {
+            content: '';
+            display: flex;
+            width: 20px;
+            height: 3px;
+            background: #ffffff;
+            position: absolute;
+            right: 3px;
+        }
+
+        .span::after {
+            content: '';
+            display: flex;
+            width: 26px;
+            border: 1px solid #ffffff;
+            position: absolute;
+            top: 8px;
+            right: -1px;
+        }
+
+        .span::before {
+            content: '';
+            display: flex;
+            width: 26px;
+            border: 1px solid #ffffff;
+            position: absolute;
+            bottom: 8px;
+            right: -1px;
+        }
+    }
+
+    .burger__pop-up {
+        display: flex;
+        width: 350px;
+        height: auto;
+        padding: 50px;
+        border-radius: var(--border-20);
+        background: var(--color-dark);
+        position: absolute;
+        top: 40px;
+        right: 10px;
+        z-index: 9999;
+
+        &_enter {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+
+        &_list {
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+
+            .pop-up__list_item {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                .pop-up__list_item-dots {
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+
+    .burger__pop-up {
+        display: none;
+    }
+
+    .header-top__menu_burger:hover .burger__pop-up {
+        display: block;
+    }
+}
+
+// HEADER BOTTOM
+.header-bottom-bg {
+    background-color: #fafafa;
+}
+
+.header-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+
+    &__logo-wrapper {
+        display: flex;
+        gap: 30px;
+
+        .header-bottom__line {
+            border: 1px solid #D9E7DA;
+        }
+
+        .header-bottom__logo_text {
             display: flex;
             align-items: center;
             font-size: 15px;
-
-            .container__logo_line {
-                width: 71px;
-                height: 0;
-                border: 1px solid #d9e7da;
-                transform: rotate(90deg);
-            }
         }
+    }
 
-        .input-wrapper {
-            position: relative;
+    &__field-wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
 
-        }
-
-        &_field {
-            width: 321px;
+        .header-bottom__field {
+            width: 320px;
             height: 44px;
-            padding: 10px 20px;
+            padding: 10px 40px 10px 10px;
+            background: #fafafa;
+            border: .5px solid #c0c0c0;
             border-radius: var(--border-10);
-            border: var(--bord-field-lt);
+            box-shadow: 0 1px 15px rgba(192, 192, 192, 0.225);
         }
 
-        .field-button-search {
+        .header-bottom__button {
             position: absolute;
-            top: 2px;
-            right: 0px;
-            width: 35px;
-            height: 35px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: inherit;
+            right: 0;
+            padding: 12px 15px 12px 10px;
+            cursor: pointer;
+        }
+    }
 
+    .header-bottom__sked {
+        display: flex;
+        flex-direction: column;
+        color: var(--alt-text);
+
+        .bold-text {
+            font-size: 12px;
+            font-weight: 700;
         }
 
-        .social-links {
-            display: flex;
-            gap: 50px;
+        .thin-text {
+            font-size: 12px;
+            font-weight: 400;
         }
+    }
 
-        .header-bottom__phone-menu {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+    &__social-wrapper {
+        display: flex;
+        gap: 50px;
 
-        .phone__menu_link-wrapper {
+        .social-wrapper__telegramm,
+        .social-wrapper__whatsapp {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--alt-text);
             position: relative;
 
-            .phone__list-wrapper {
+            .telegramm-icon {
                 position: absolute;
-                top: 15px;
-                right: -25px;
+                top: 9px;
+                left: 7px;
+            }
+
+            .whatsapp-icon {
+                position: absolute;
+                top: 7px;
+                left: 8px;
+            }
+        }
+    }
+}
+
+// 
+.header-bottom__phone-wrapper {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+    .phone-button,
+    .phone-wrapper__link {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .phone-button:hover,
+    a:hover {
+        background-color: #55ff0044;
+    }
+
+    .phone-wrapper__icon-chevron {
+        position: relative;
+
+        .phone_list-wrapper {
+            position: absolute;
+            top: 30px;
+            right: 10px;
+            width: 300px;
+            height: auto;
+            padding: 50px 30px;
+            background: var(--color-dark);
+            border-radius: var(--border-20);
+            display: none;
+
+            .enter {
+                position: absolute;
+                top: 10px;
+                right: 15px;
                 display: flex;
-                width: 300px;
-                padding-top: 25px;
-                color: var(--color-dark);
-                border-radius: var(--border-20);
-                background-color: inherit;
-
-                .phone__list {
-                    display: flex;
-                    padding: 20px 20px;
-                    flex-direction: column;
-                    gap: 20px;
-                    border: .5px solid #b9b9b9;
-                    background-color: #fafafa;
-                    border-radius: var(--border-10);
-                }
+                padding: 3px;
+                color: var(--color-white);
+                border-radius: 10px;
+                border: 1px solid rgba(192, 192, 192, 0.274);
             }
 
-            .phone__list-wrapper {
-                display: none;
+            .phone__list {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                padding: 20px;
+                color: var(--color-white);
+                border: 1px solid rgba(192, 192, 192, 0.274);
+                border-radius: var(--border-10);
+                background: var(--color-dark);
             }
         }
+    }
 
-        .phone__menu_link {
-            display: flex;
-            padding: 5px;
-        }
+    .phone-wrapper__icon-chevron:hover .phone_list-wrapper {
+        display: block;
+    }
+}
 
-        .phone__menu_link-wrapper:hover .phone__list-wrapper {
-            display: block;
+@media(max-width:1443.9px) {
+    .header-bottom__social-wrapper {
+        display: none;
+    }
+}
+
+@media(max-width:1279.9px) {
+    .header-bottom__sked-wrapper {
+        display: none;
+    }
+}
+
+@media(max-width:1169.9px) {
+    .header-bottom {
+        justify-content: space-around;
+    }
+
+    .header-bottom__phone-wrapper {
+        display: none;
+    }
+
+    .location-wrapper {
+        display: none;
+    }
+
+    .phone-wrapper {
+        display: flex;
+    }
+
+    .news {
+        text-align: center;
+    }
+
+    .news__cards {
+        flex-direction: column;
+        gap: 30px;
+
+        .news__card {
+            width: 100%;
+
+            &_link {
+                margin: 0 auto;
+            }
         }
     }
 }
