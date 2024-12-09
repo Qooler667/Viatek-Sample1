@@ -33,6 +33,10 @@
     align-items: center;
     display: none;
 
+    .header-top_phone-size {
+        @include fluid-text(20, 12);
+    }
+
     .phone-button,
     .phone-wrapper__link {
         width: 30px;
@@ -207,6 +211,17 @@
         display: flex;
         gap: 30px;
 
+        .header-bottom__logo {
+            display: flex;
+            min-width: 98px;
+            height: 52px;
+
+            .logo {
+                width: 100%;
+                height: auto;
+            }
+        }
+
         .header-bottom__line {
             border: 1px solid #D9E7DA;
         }
@@ -215,8 +230,10 @@
             display: flex;
             align-items: center;
             font-size: 15px;
+            white-space: nowrap;
         }
     }
+
 
     &__field-wrapper {
         display: flex;
@@ -358,15 +375,18 @@
     .header-bottom__sked-wrapper {
         display: none;
     }
+
+}
+
+@media(max-width:1200px) {
+    .header-bottom__phone-wrapper {
+        display: none;
+    }
 }
 
 @media(max-width:1169.9px) {
     .header-bottom {
         justify-content: space-around;
-    }
-
-    .header-bottom__phone-wrapper {
-        display: none;
     }
 
     .location-wrapper {
@@ -392,5 +412,31 @@
                 margin: 0 auto;
             }
         }
+    }
+}
+
+@media(max-width:980px) {
+    .header-top__nav-menu {
+        display: none;
+    }
+
+    .header-bottom {
+        flex-direction: column;
+    }
+
+    .header-bottom__logo-wrapper {
+        gap: 15px;
+    }
+
+    .header-bottom__field-wrapper {
+        width: 280px;
+    }
+
+    .yes {
+        display: none;
+    }
+
+    .none {
+        display: block;
     }
 }

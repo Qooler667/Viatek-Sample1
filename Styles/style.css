@@ -259,6 +259,10 @@ h4 {
   color: var(--color-dark);
 }
 
+p {
+  font-size: clamp(12px, 1.2820512821vw, 20px);
+}
+
 ::-moz-placeholder {
   color: var(--text-field);
 }
@@ -336,6 +340,9 @@ h4 {
   gap: 5px;
   align-items: center;
   display: none;
+}
+.phone-wrapper .header-top_phone-size {
+  font-size: clamp(12px, 1.2820512821vw, 20px);
 }
 .phone-wrapper .phone-button,
 .phone-wrapper .phone-wrapper__link {
@@ -491,6 +498,15 @@ h4 {
   display: flex;
   gap: 30px;
 }
+.header-bottom__logo-wrapper .header-bottom__logo {
+  display: flex;
+  min-width: 98px;
+  height: 52px;
+}
+.header-bottom__logo-wrapper .header-bottom__logo .logo {
+  width: 100%;
+  height: auto;
+}
 .header-bottom__logo-wrapper .header-bottom__line {
   border: 1px solid #D9E7DA;
 }
@@ -498,6 +514,7 @@ h4 {
   display: flex;
   align-items: center;
   font-size: 15px;
+  white-space: nowrap;
 }
 .header-bottom__field-wrapper {
   display: flex;
@@ -623,12 +640,14 @@ h4 {
     display: none;
   }
 }
+@media (max-width: 1200px) {
+  .header-bottom__phone-wrapper {
+    display: none;
+  }
+}
 @media (max-width: 1169.9px) {
   .header-bottom {
     justify-content: space-around;
-  }
-  .header-bottom__phone-wrapper {
-    display: none;
   }
   .location-wrapper {
     display: none;
@@ -650,16 +669,40 @@ h4 {
     margin: 0 auto;
   }
 }
+@media (max-width: 980px) {
+  .header-top__nav-menu {
+    display: none;
+  }
+  .header-bottom {
+    flex-direction: column;
+  }
+  .header-bottom__logo-wrapper {
+    gap: 15px;
+  }
+  .header-bottom__field-wrapper {
+    width: 280px;
+  }
+  .yes {
+    display: none;
+  }
+  .none {
+    display: block;
+  }
+}
+h1,
+h2 {
+  font-size: clamp(35px, 2.8846153846vw, 45px);
+}
+
 .review-container {
   display: flex;
   justify-content: space-between;
+  gap: 50px;
 }
 .review-container .review__inform {
-  min-width: 450px;
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding-right: 30px;
 }
 .review-container .review__inform .none {
   display: none;
@@ -677,6 +720,14 @@ h4 {
 }
 .review-container .review__inform .review__dots_dot:first-child {
   background: #1fa547;
+}
+.review-container .review__img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.review-container .review__img-wrapper .review__img {
+  width: 100%;
+  height: auto;
 }
 
 .services {
@@ -745,6 +796,7 @@ h4 {
 }
 .about-wrap__aboutUs_text {
   display: flex;
+  width: 100%;
   height: 542px;
   overflow-y: auto;
   line-height: 150%;
@@ -767,9 +819,14 @@ h4 {
   border-radius: var(--border-10);
 }
 .about-wrap__img {
-  width: 800px;
-  height: 800px;
+  display: flex;
+  max-width: 945px;
+  max-height: 919px;
   border: 1px solid black;
+}
+.about-wrap__img .about-img {
+  width: 100%;
+  height: auto;
 }
 
 .news {
@@ -908,6 +965,20 @@ h4 {
     width: 100%;
     margin: 0 auto;
   }
+  .aboutUs_text {
+    white-space: normal;
+  }
+  .aboutUs_text .review-none {
+    display: block;
+  }
+  section {
+    padding: 30px 0;
+    gap: 30px;
+  }
+  .container {
+    padding: 30px 10px;
+    gap: 30px;
+  }
 }
 footer {
   background: var(--bg-footer-gradient);
@@ -919,10 +990,8 @@ footer .footer-wrapper {
   gap: 30px;
 }
 footer .footer-wrapper .footer__connection {
-  width: 100%;
   padding: 0 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   color: var(--color-white);
 }
@@ -935,6 +1004,14 @@ footer .footer-wrapper .footer__connection .footer__number {
   font-family: var(--secondary-font);
   font-weight: 400;
   font-size: 15px;
+}
+footer .footer-wrapper .footer__connection .footer__logo,
+footer .footer-wrapper .footer__connection .footer__number,
+footer .footer-wrapper .footer__connection .footer_adress,
+footer .footer-wrapper .footer__connection .footer__post,
+footer .footer-wrapper .footer__connection .footer__social {
+  padding: 0 20px;
+  white-space: nowrap;
 }
 footer .footer-wrapper .footer__connection .footer__number {
   font-size: 25px;
@@ -960,6 +1037,13 @@ footer .footer-wrapper .footer__legal {
   padding-left: 40px;
 }
 
+@media (max-width: 1180px) {
+  .footer__connection {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
 .foto-wrapper {
   display: flex;
   width: 100%;

@@ -8,10 +8,8 @@ footer {
         gap: 30px;
 
         .footer__connection {
-            width: 100%;
             padding: 0 40px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
             color: var(--color-white);
 
@@ -24,6 +22,16 @@ footer {
                 font-family: var(--secondary-font);
                 font-weight: 400;
                 font-size: 15px;
+            }
+
+            .footer__logo,
+            .footer__number,
+            .footer_adress,
+            .footer__post,
+            .footer__social {
+                padding: 0 20px;
+                white-space: nowrap;
+
             }
 
             .footer__number {
@@ -55,5 +63,14 @@ footer {
             font-weight: 400;
             padding-left: 40px;
         }
+    }
+}
+
+@media(max-width:1180px) {
+
+    .footer__connection {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
     }
 }
