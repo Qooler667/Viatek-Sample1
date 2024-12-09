@@ -992,6 +992,7 @@ footer .footer-wrapper {
 footer .footer-wrapper .footer__connection {
   padding: 0 40px;
   display: flex;
+  justify-content: space-around;
   align-items: center;
   color: var(--color-white);
 }
@@ -1022,7 +1023,7 @@ footer .footer-wrapper .footer__connection .myriad-small {
 }
 footer .footer-wrapper .footer__connection .footer__social {
   display: flex;
-  gap: 135px;
+  gap: 100px;
 }
 footer .footer-wrapper .footer__line {
   border: 1px solid #26b447;
@@ -1039,7 +1040,6 @@ footer .footer-wrapper .footer__legal {
 
 @media (max-width: 1180px) {
   .footer__connection {
-    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
   }
