@@ -229,8 +229,14 @@
         .header-bottom__logo_text {
             display: flex;
             align-items: center;
-            font-size: 15px;
-            white-space: nowrap;
+
+            .logo-text {
+                @include fluid-text(15, 12);
+            }
+
+            .header-none {
+                display: none;
+            }
         }
     }
 
@@ -306,6 +312,10 @@
     display: flex;
     gap: 5px;
     align-items: center;
+
+    .phone-number {
+        @include fluid-text(20, 16);
+    }
 
     .phone-button,
     .phone-wrapper__link {
@@ -432,11 +442,4 @@
         width: 280px;
     }
 
-    .yes {
-        display: none;
-    }
-
-    .none {
-        display: block;
-    }
 }

@@ -4,6 +4,10 @@ h2 {
     @include fluid-text (45, 35);
 }
 
+.aboutUs_text {
+    @include fluid-text(20, 16);
+}
+
 .review-container {
     display: flex;
     justify-content: space-between;
@@ -46,8 +50,6 @@ h2 {
             height: auto;
         }
     }
-
-
 }
 
 // SERVICES SECTION
@@ -60,13 +62,14 @@ h2 {
     &__types-wrapper {
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: auto;
+        overflow-x: hidden;
     }
 
     .services__types {
         border-radius: var(--border-20);
         position: relative;
-        margin-right: 42px;
+        margin-right: 37px;
+
 
         .types__img_shadow {
             width: 270px;
@@ -107,64 +110,49 @@ h2 {
 }
 
 // ABOUT SECTION
-.about {
-    background-color: #26B447;
+.about-bg-color {
+    background: var(--color-green);
 
-    .about-wrap {
+    .about {
         display: flex;
     }
 
-    &-wrap__aboutUs {
+    .about-info {
+        max-width: 50%;
         display: flex;
         flex-direction: column;
         gap: 50px;
         color: var(--color-white);
-        margin-right: 10px;
 
-        h2 {
+        &__title {
             color: var(--color-white);
         }
 
-        &_text {
-            display: flex;
-            width: 100%;
+        &__text-wrapper {
+            max-width: 100%;
             height: 542px;
-            overflow-y: auto;
-            line-height: 150%;
-            font-size: 20px;
-            font-weight: 400;
-            white-space: nowrap;
+            padding-right: 20px;
+            margin-right: 20px;
+            overflow-y: scroll;
+
         }
 
         ::-webkit-scrollbar {
-            width: 3px;
-            background: #00ff4c44;
+            width: 5px;
+            background: #00ff0079;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #62ff0081;
+
+            height: 3px;
+            background: #6bff02;
         }
 
-        &_button {
-            width: 151px;
-            line-height: 100%;
-            background-color: inherit;
-            border: 1px solid var(--color-white);
-            border-radius: var(--border-10);
+        &__text {
+            @include fluid-text(20, 16);
         }
     }
 
-    &-wrap__img {
-        display: flex;
-        max-width: 945px;
-        max-height: 919px;
-        border: 1px solid black;
-
-        .about-img {
-            width: 100%;
-            height: auto;
-        }
-    }
 }
 
 // NEWS SECTION
@@ -233,7 +221,7 @@ h2 {
         display: flex;
         position: relative;
         z-index: 9999;
-        margin-right: 30px;
+        margin-right: 25px;
 
 
 
@@ -302,46 +290,6 @@ h2 {
         }
     }
 
-    .about {
-        padding: 30px 0;
-    }
-
-    .about-wrap {
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 30px;
-        text-align: center;
-
-        &__aboutUs {
-            gap: 30px;
-
-            .about-wrap__aboutUs_text {
-                display: flex;
-                margin: 0 auto;
-
-                .aboutUs_text {
-                    padding: 0 20px;
-                }
-            }
-
-            &_button {
-                margin: 0 auto;
-            }
-        }
-
-        &__img {
-            width: 100%;
-            margin: 0 auto;
-        }
-    }
-
-    .aboutUs_text {
-        white-space: normal;
-
-        .review-none {
-            display: block;
-        }
-    }
 
     section {
         padding: 30px 0;
@@ -352,6 +300,5 @@ h2 {
         padding: 30px 10px;
         gap: 30px;
     }
-}
 
-@media(max-width:579.9px) {}
+}

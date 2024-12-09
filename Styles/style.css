@@ -206,6 +206,7 @@ textarea {
   font-size: 20px;
   font-weight: 400;
   line-height: 100%;
+  border: 1px solid var(--color-white);
   border-radius: var(--border-20);
   color: var(--color-white);
 }
@@ -513,8 +514,12 @@ p {
 .header-bottom__logo-wrapper .header-bottom__logo_text {
   display: flex;
   align-items: center;
-  font-size: 15px;
-  white-space: nowrap;
+}
+.header-bottom__logo-wrapper .header-bottom__logo_text .logo-text {
+  font-size: clamp(12px, 0.9615384615vw, 15px);
+}
+.header-bottom__logo-wrapper .header-bottom__logo_text .header-none {
+  display: none;
 }
 .header-bottom__field-wrapper {
   display: flex;
@@ -578,6 +583,9 @@ p {
   display: flex;
   gap: 5px;
   align-items: center;
+}
+.header-bottom__phone-wrapper .phone-number {
+  font-size: clamp(16px, 1.2820512821vw, 20px);
 }
 .header-bottom__phone-wrapper .phone-button,
 .header-bottom__phone-wrapper .phone-wrapper__link {
@@ -682,16 +690,14 @@ p {
   .header-bottom__field-wrapper {
     width: 280px;
   }
-  .yes {
-    display: none;
-  }
-  .none {
-    display: block;
-  }
 }
 h1,
 h2 {
   font-size: clamp(35px, 2.8846153846vw, 45px);
+}
+
+.aboutUs_text {
+  font-size: clamp(16px, 1.2820512821vw, 20px);
 }
 
 .review-container {
@@ -739,12 +745,12 @@ h2 {
 .services__types-wrapper {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 .services .services__types {
   border-radius: var(--border-20);
   position: relative;
-  margin-right: 42px;
+  margin-right: 37px;
 }
 .services .services__types .types__img_shadow {
   width: 270px;
@@ -778,55 +784,39 @@ h2 {
   margin-right: 0;
 }
 
-.about {
-  background-color: #26B447;
+.about-bg-color {
+  background: var(--color-green);
 }
-.about .about-wrap {
+.about-bg-color .about {
   display: flex;
 }
-.about-wrap__aboutUs {
+.about-bg-color .about-info {
+  max-width: 50%;
   display: flex;
   flex-direction: column;
   gap: 50px;
   color: var(--color-white);
-  margin-right: 10px;
 }
-.about-wrap__aboutUs h2 {
+.about-bg-color .about-info__title {
   color: var(--color-white);
 }
-.about-wrap__aboutUs_text {
-  display: flex;
-  width: 100%;
+.about-bg-color .about-info__text-wrapper {
+  max-width: 100%;
   height: 542px;
-  overflow-y: auto;
-  line-height: 150%;
-  font-size: 20px;
-  font-weight: 400;
-  white-space: nowrap;
+  padding-right: 20px;
+  margin-right: 20px;
+  overflow-y: scroll;
 }
-.about-wrap__aboutUs ::-webkit-scrollbar {
-  width: 3px;
-  background: rgba(0, 255, 76, 0.2666666667);
+.about-bg-color .about-info ::-webkit-scrollbar {
+  width: 5px;
+  background: rgba(0, 255, 0, 0.4745098039);
 }
-.about-wrap__aboutUs ::-webkit-scrollbar-thumb {
-  background: rgba(98, 255, 0, 0.5058823529);
+.about-bg-color .about-info ::-webkit-scrollbar-thumb {
+  height: 3px;
+  background: #6bff02;
 }
-.about-wrap__aboutUs_button {
-  width: 151px;
-  line-height: 100%;
-  background-color: inherit;
-  border: 1px solid var(--color-white);
-  border-radius: var(--border-10);
-}
-.about-wrap__img {
-  display: flex;
-  max-width: 945px;
-  max-height: 919px;
-  border: 1px solid black;
-}
-.about-wrap__img .about-img {
-  width: 100%;
-  height: auto;
+.about-bg-color .about-info__text {
+  font-size: clamp(16px, 1.2820512821vw, 20px);
 }
 
 .news {
@@ -887,7 +877,7 @@ h2 {
   display: flex;
   position: relative;
   z-index: 9999;
-  margin-right: 30px;
+  margin-right: 25px;
 }
 .gallery__img .gallery__img_shadow {
   width: 280px;
@@ -938,38 +928,6 @@ h2 {
   .review-container .review__img-wrapper {
     width: 100%;
     height: 100%;
-  }
-  .about {
-    padding: 30px 0;
-  }
-  .about-wrap {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 30px;
-    text-align: center;
-  }
-  .about-wrap__aboutUs {
-    gap: 30px;
-  }
-  .about-wrap__aboutUs .about-wrap__aboutUs_text {
-    display: flex;
-    margin: 0 auto;
-  }
-  .about-wrap__aboutUs .about-wrap__aboutUs_text .aboutUs_text {
-    padding: 0 20px;
-  }
-  .about-wrap__aboutUs_button {
-    margin: 0 auto;
-  }
-  .about-wrap__img {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .aboutUs_text {
-    white-space: normal;
-  }
-  .aboutUs_text .review-none {
-    display: block;
   }
   section {
     padding: 30px 0;
