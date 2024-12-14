@@ -1,4 +1,3 @@
-// REVIEW SECTION
 h1,
 h2 {
     @include fluid-text (45, 35);
@@ -8,6 +7,7 @@ h2 {
     @include fluid-text(20, 16);
 }
 
+// REVIEW SECTION
 .review-container {
     display: flex;
     justify-content: space-between;
@@ -110,49 +110,126 @@ h2 {
 }
 
 // ABOUT SECTION
-.about-bg-color {
-    background: var(--color-green);
+.about-us {
+    background: green;
+    color: aliceblue;
 
-    .about {
-        display: flex;
-    }
+}
 
-    .about-info {
-        max-width: 50%;
+
+.about-container {
+    display: flex;
+    max-width: 1560px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    .text-box {
         display: flex;
         flex-direction: column;
+        width: 760px;
+        padding: 50px 0;
+        padding-right: 30px;
         gap: 50px;
-        color: var(--color-white);
 
         &__title {
             color: var(--color-white);
         }
 
-        &__text-wrapper {
-            max-width: 100%;
-            height: 542px;
-            padding-right: 20px;
-            margin-right: 20px;
-            overflow-y: scroll;
-
-        }
-
-        ::-webkit-scrollbar {
-            width: 5px;
-            background: #00ff0079;
-        }
-
-        ::-webkit-scrollbar-thumb {
-
-            height: 3px;
-            background: #6bff02;
-        }
-
         &__text {
-            @include fluid-text(20, 16);
+            display: flex;
+            width: 100%;
+            height: 700px;
+            padding-right: 30px;
+            overflow-y: scroll;
+        }
+
+        &__button {
+            padding: 20px 0;
         }
     }
 
+    .image-box {
+        display: flex;
+        width: 760px;
+
+        img {
+            width: 150%;
+            height: 100%;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    background-color: rgb(0, 198, 7);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(106, 255, 0);
+
+}
+
+@media(max-width:1440px) {
+    .about-container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 95%;
+    }
+
+    .text-box {
+        display: flex;
+        width: 90%;
+        height: 700px;
+        gap: 30px;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .text-box__text {
+        display: flex;
+        max-width: 1200px;
+        height: auto;
+        padding-right: 20px;
+    }
+
+    p {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .bp1440 {
+        display: none;
+    }
+
+    .image-box {
+        display: flex;
+        width: 100%;
+        height: 550px;
+    }
+
+}
+
+@media(max-width:785px) {
+    .container {
+        padding: 0;
+    }
+
+    .text-box {
+        width: 100%;
+    }
+
+    .image-box {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-box>img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 // NEWS SECTION
