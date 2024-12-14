@@ -749,7 +749,11 @@ h2 {
 .services__types-wrapper {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: hidden;
+  padding-bottom: 5px;
+  overflow-x: scroll;
+}
+.services ::-webkit-scrollbar {
+  height: 3px;
 }
 .services .services__types {
   border-radius: var(--border-20);
@@ -941,7 +945,11 @@ h2 {
 .gallery__images-wrapper {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: scroll;
+  padding-bottom: 5px;
+}
+.gallery ::-webkit-scrollbar {
+  height: 3px;
 }
 .gallery__img {
   display: flex;

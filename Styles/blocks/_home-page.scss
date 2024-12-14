@@ -62,7 +62,12 @@ h2 {
     &__types-wrapper {
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: hidden;
+        padding-bottom: 5px;
+        overflow-x: scroll;
+    }
+
+    ::-webkit-scrollbar {
+        height: 3px;
     }
 
     .services__types {
@@ -208,7 +213,6 @@ h2 {
         }
     }
 
-
 }
 
 @media(max-width:785px) {
@@ -291,7 +295,12 @@ h2 {
     &__images-wrapper {
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: auto;
+        overflow-x: scroll;
+        padding-bottom: 5px;
+    }
+
+    ::-webkit-scrollbar {
+        height: 3px;
     }
 
     &__img {
