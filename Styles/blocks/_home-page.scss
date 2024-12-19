@@ -75,6 +75,7 @@ h2 {
         border-radius: var(--border-20);
         position: relative;
         margin-right: 37px;
+        box-shadow: 1px 3px 5px black;
 
 
         .types__img_shadow {
@@ -142,19 +143,25 @@ h2 {
         &__text {
             display: flex;
             width: 100%;
-            height: 700px;
+            max-height: 542px;
             padding-right: 30px;
             overflow-y: scroll;
+            line-height: 150%;
         }
 
         &__button {
-            padding: 20px 0;
+            margin-top: 30px;
+
+            .button {
+                line-height: 100%;
+                border-radius: var(--border-10);
+                box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.278);
+            }
         }
     }
 
     .image-box {
         display: flex;
-        width: 100%;
         margin-right: -250px;
 
 
@@ -163,6 +170,7 @@ h2 {
             height: 100%;
         }
     }
+
 }
 
 ::-webkit-scrollbar {
@@ -172,7 +180,6 @@ h2 {
 
 ::-webkit-scrollbar-thumb {
     background: rgb(106, 255, 0);
-
 }
 
 // NEWS SECTION
@@ -197,6 +204,7 @@ h2 {
         margin-right: 30px;
         border: 1px solid #eeeeee;
         border-radius: var(--border-20);
+        box-shadow: 1px 3px 15px rgb(236, 236, 236);
     }
 
     &__card:last-child {
@@ -248,6 +256,8 @@ h2 {
         position: relative;
         z-index: 9999;
         margin-right: 25px;
+        border-radius: var(--border-20);
+        box-shadow: 1px 3px 5px black;
 
 
 
@@ -283,7 +293,7 @@ h2 {
 
 }
 
-// @MEDIA-SECTIONS
+// @MEDIA-SECTIONS *ДЛЯ ВСЕХ СЕКЦИЙ
 @media(max-width:1443.9px) {
     .review-container {
         display: flex;
@@ -312,17 +322,17 @@ h2 {
         .review__img-wrapper {
             width: 100%;
             height: 100%;
-
         }
     }
 
+    // ДЛЯ ВСЕХ СЕКЦИЙ
     section {
         padding: 30px 0;
         gap: 30px;
     }
 
     .container {
-        padding: 30px 10px;
+        padding: 30px 20px;
         gap: 30px;
     }
 
@@ -338,9 +348,8 @@ h2 {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
-
 
         .info-box {
             display: flex;
@@ -367,15 +376,19 @@ h2 {
 
         .image-box {
             display: flex;
-            width: 95%;
+            width: 90%;
             height: 750px;
-            margin: -30px 0;
+            margin: 0;
+            box-shadow: 1px 3px 5px black;
         }
     }
 }
 
 @media(max-width:785px) {
+
+
     .about-container {
+        width: 100%;
         padding: 0;
 
         .info-box {

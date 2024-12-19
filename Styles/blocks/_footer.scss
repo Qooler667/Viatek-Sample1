@@ -68,10 +68,22 @@ footer {
 }
 
 @media(max-width:1180px) {
+    .footer {
+        padding: 10px;
+    }
 
     .footer__connection {
         flex-wrap: wrap;
         gap: 30px;
     }
 
+}
+
+@media(max-width:471.9px) {
+
+    .footer_adress,
+    .footer__post,
+    .footer__number {
+        text-align: center;
+    }
 }
