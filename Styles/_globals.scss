@@ -79,7 +79,7 @@
 
  h3 {
      @include fluid-text (35, 25);
-     font-weight: 300;
+     font-weight: medium;
      color: var(--color-dark)
  }
 
@@ -96,6 +96,7 @@
  ::placeholder {
      color: var(--text-field);
  }
+
 
  .container {
      display: flex;

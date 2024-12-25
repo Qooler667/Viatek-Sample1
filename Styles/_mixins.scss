@@ -2,6 +2,7 @@
     font-size: clamp(#{$min}px, #{calc($max / 1560 * 100)}vw, #{$max}px);
 }
 
+
 // для кнопок на мобиле
 @mixin hover {
     @media(hover: hover) {
